@@ -1,0 +1,36 @@
+// Base settings for all themes that can optionally be
+// overridden by the super-theme
+
+// Background of the presentation
+$backgroundColor: #0262A3;
+
+// Primary/body text
+$mainFont: 'Avenir LT W01 65 Medium', sans-serif;
+$mainFontSize: 36px;
+$mainColor: #fff;
+
+// Headings
+$headingMargin: 0 0 20px 0;
+$headingFont: 'Avenir LT W01 85 Heavy', Impact, sans-serif;
+$headingColor: #fff;
+$headingLineHeight: 0.9em;
+$headingLetterSpacing: 0.02em;
+$headingTextTransform: uppercase;
+$headingTextShadow: 0px 0px 0px rgba(0,0,0,0.2);
+$heading1TextShadow: $headingTextShadow;
+
+// Links and actions
+$linkColor: #FFFFAA;
+$linkColorHover: darken( $linkColor, 20% );
+
+// Text selection
+$selectionBackgroundColor: #FFF;
+$selectionColor: #0262A3;
+
+$logoURL: url('assets/esri-logo.png');
+
+// Generates the presentation background, can be overridden
+// to return a background image or gradient
+@mixin bodyBackground() {
+	background: $backgroundColor;
+}

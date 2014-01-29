@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Introduction to Javascript</title>
+
+		<meta name="description" content="Introduction to Javascript">
+		<meta name="author" content="James Tedrick & Evan Caldwell">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/esri.css" id="theme">
+        <link rel="stylesheet" href="css/decoration.css">
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+        
+        
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+    
+    <body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section class="firstSlide" style="padding-top:25% !important;">
+					<h2>Introduction to JavaScript</h2>
+                    <p>James Tedrick &amp; Evan Caldwell</p>
+				</section>
+				<section>
+                    <section>
+                        <h3>A brief history of web pages</h3>
+                        <img src="assets/esri_first_website.jpg" height="500px" />
+                        <p>
+						  Web pages started out with only text, images, and links
+                        </p>
+                    </section>
+                    <section>
+                        <p>
+                            Using web servers to run applications and JavaScript to provide minimal interactivity in a browser, we could develop applications
+                        </p>
+                        <img src="assets/CLFFigure_2.jpg" height="500px"/>
+                        <br />Application work: <span class="big">Server</span> &gt; <span class="small">Desktop</span>
+                        
+                    </section>
+                    <section>
+                        <p>
+                            Modern web applications now use JavaScript in the browser to provide most functionality.
+                        </p>
+                        <img src="assets/dotFlex.jpg" height="500px"/>
+                        <p>Application work: <span class="small">Server</span> &lt; <span class="big">Desktop</span></p>
+                    </section>
+				</section>
+                <section>
+                    <h3>Getting Started</h3>
+                    <p><a href="https://developers.arcgis.com/javascript/">https://developers.arcgis.com/javascript/</a></p>
+                </section>
+                <section>
+                    <h3>What can you do with the JS API?</h3>
+                    <ul>
+                        <li>Create Interactive maps</li>
+                        <li>Use ArcGIS Online Basemaps &amp; Services</li>
+                        <ul>
+                            <li>Find Addresses</li>
+                            <li>Calculate a route</li>
+                        </ul>
+                        <li>Run your own tasks</li>
+                        <li>Load data from ArcGIS Server</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3 style="text-transform: none">dojo Toolkit</h3>
+                    <a href="//dojotoolkit.org">http://dojotoolkit.org</a><br /><br />
+                        <ul>
+                            <li>Esri JS API is built on top of the Dojo Toolkit</li>
+                            <li>Dojo is a set of tools to make it easier to build complex applications using JavaScript</li>
+                            <li>Automates common JavaScript tasks &amp; workflows</li>
+                            <li>Provides user interface (layout structure, graphs, form items)</li>
+                            <li>Dojo is organized in <em>modules</em> to make it easy to load</li>
+                        </ul>
+                </section>
+                <section>
+                    <h3>Loading modules</h3>
+                    Load modules using the <code><b>require</b></code> method:
+                    <div style="text-align: left; margin:auto; width:50%"><br /><code style="text-align:left;">require(["esri/Map"], <br />&nbsp;&nbsp;function(Map){<br />
+                           &nbsp;&nbsp;&nbsp;&nbsp;var map = new Map();<br />
+                        &nbsp;&nbsp;}<br /> );
+                    </code>
+                        </div><br />
+                    First is the list of modules you're using, <br />then a function that uses the modules as parameters
+                </section>
+                <section>
+                    <h3>Dijits</h3>
+                    User Interface (UI) components
+                    <ul>
+                        <li>Layout: Containers, Tabs, Accordions</li>
+                        <li>App control: Menus, Dialogs</li>
+                        <li>Forms: Validating text box, Dropdowns, Rich Text</li>
+                        <li>Data Display: Charts, Grids, Gauges</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Inside the JS API</h3>
+                    <ul>
+                        <li>Map - with contorls, infoWindow (pop-up), graphics layer &amp; map layers</li>
+                        <li>Map Layers
+                            <ul>
+                                <li>Map Service Layers - images of maps (entire area or cached tiles)</li>
+                                <li>Graphics / Feature Layers - vectors &amp attributes (manipulate in app)</li>
+                            </ul>
+                        <li>Tasks - Query, Locator, Geoprocessing, Geometry</li>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Esri Dijits - Map UI</h3>
+                        <ul style="column-count:2; -moz-column-count:2; -webkit-column-count:2; list-style-position: inside; margin-top:30px;">
+                            <li>Geolocation</li>
+                            <li>Geocoder</li>
+                            <li>Directions</li>
+                            <li>Printing</li>
+                            <li>Identity Manager</li>
+                            <li>Legend / Scalebar</li>
+                            <li>Measurement</li>
+                            <li>Basemap Gallery</li>
+                            <li>GeoEnrichment</li>
+                            <li>Histogram</li>
+                            <li>Swipe</li>
+                        </ul>
+
+                </section>
+                <section>
+                    <h3>Bring your own framework!</h3>
+                    <ul><li>The JS API also plays well with other frameworks (jQuery, Sencha, …)</li>
+                    <li>Esri provides a <em style="text-decoration:underline">compact build</em> of the API, minimizes the amount of Dojo loaded<br /><br /></li>
+                    <li>Recommended design philosophy: separate Esri/Dojo code from other framework code to enhance maintainability</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Developing Applications</h2>
+                </section>
+                <section>
+                    <h3>Coding Tools</h3>
+                    
+                </section>
+                <section>
+                    <h3>Ajax</h3>
+                    <p>(it's not just for cleaning)</p>
+                </section>
+                <section>
+                    <h5>Not all browsers are created equal</h5>
+                    <p class="fragment small">(IE 8, I'm looking at you)</p>
+                    <iframe class="fragment fancy" src="http://caniuse.com/geolocation/embed/" width="920" height="386"></iframe>
+                    <p class="fragment">&#9654; <i class="small">Note: U.S. Government has an IE 8 standard</i> &#9664;</p>
+                </section>
+                <section>
+                    <h3>Proxies &amp; CORS</h3>
+                    <ul>
+                        <li>Normally, web pages can't receive data from another domain (cross domain)</li>
+                        <li>You see it as stuff not loading with <span style="color:#F00">Permission Denied</span> errors</li>
+                        <li>Ways to get around that:
+                            <ul>
+                                <li>Proxy Applications: you run an application on your web server to fetch data <br /><a href="https://developers.arcgis.com/javascript/jshelp/ags_proxy.html">ArcGIS Proxy Documentation</a></li>
+                                <li>Cross-Origin Resource Sharing (CORS): New standard for configuring the server providing data <br /> <a href="//enable-cors.org">http://enable-cors.org</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>What's coming?</h3>
+                </section>
+                <section>
+                    <h2>Questions?</h2>
+                </section>
+				<section class="lastSlide">
+                    <!--<img src="assets/esri-logo.png" />-->
+                </section>
+            </div>
+        </div>
+    
+        <script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+    </body>
+    
+</html>
