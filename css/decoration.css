@@ -17,3 +17,11 @@
     border-radius: 10px !important;
     box-shadow: 5px 5px 4px #666666 !important;
 }
+
+.coding-tools {
+    height: 100%;
+    width:100%;
+    text-align:left;
+    background-image:url('../assets/codingTools.jpg');
+    background-position: center center;
+}

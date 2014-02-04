@@ -37,7 +37,7 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section class="firstSlide" style="padding-top:25% !important;">
+                <section class="firstSlide" style="padding-top:25% !important;">
 					<h2>Introduction to JavaScript</h2>
                     <p>James Tedrick &amp; Evan Caldwell</p>
 				</section>
@@ -61,13 +61,22 @@
                         <p>
                             Modern web applications now use JavaScript in the browser to provide most functionality.
                         </p>
-                        <img src="assets/dotFlex.jpg" height="500px"/>
+                        <img src="assets/iucn.jpg" height="500px"/>
                         <p>Application work: <span class="small">Server</span> &lt; <span class="big">Desktop</span></p>
                     </section>
 				</section>
                 <section>
                     <h3>Getting Started</h3>
                     <p><a href="https://developers.arcgis.com/javascript/">https://developers.arcgis.com/javascript/</a></p>
+                </section>
+                <section>
+                    <h3>The Anatomy of a web application</h3>
+                    <ul>
+                        <li>HTML: document structure</li>
+                        <li>CSS: document style</li>
+                        <li>JavaScript: Application functionality</li>
+                        <li>Web servers (via JS): document data</li>
+                    </ul>
                 </section>
                 <section>
                     <h3>What can you do with the JS API?</h3>
@@ -83,36 +92,39 @@
                     </ul>
                 </section>
                 <section>
-                    <h3 style="text-transform: none">dojo Toolkit</h3>
-                    <a href="//dojotoolkit.org">http://dojotoolkit.org</a><br /><br />
+                    <section>
+                        <h3 style="text-transform: none">dojo Toolkit</h3>
+                        <a href="//dojotoolkit.org">http://dojotoolkit.org</a><br /><br />
+                            <ul>
+                                <li>Esri JS API is built on top of the Dojo Toolkit</li>
+                                <li>Dojo is a set of tools to make it easier to build complex applications using JavaScript</li>
+                                <li>Automates common JavaScript tasks &amp; workflows</li>
+                                <li>Provides user interface (layout structure, graphs, form items)</li>
+                                <li>Dojo is organized in <em>modules</em> to make it easy to load</li>
+                            </ul>
+                    </section>
+                    <section>
+                        <h3>Loading modules</h3>
+                        Load modules using the <code><b>require</b></code> method:
+                        <div style="text-align: left; margin:auto; width:50%"><br /><code style="text-align:left;">require(["esri/Map"], <br />&nbsp;&nbsp;function(Map){<br />
+                               &nbsp;&nbsp;&nbsp;&nbsp;var map = new Map();<br />
+                            &nbsp;&nbsp;}<br /> );
+                        </code>
+                            </div><br />
+                        First is the list of modules you're using, <br />then a function that uses the modules as parameters
+                    </section>                
+                    <section>
+                        <h3>Dijits</h3>
+                        User Interface (UI) components
                         <ul>
-                            <li>Esri JS API is built on top of the Dojo Toolkit</li>
-                            <li>Dojo is a set of tools to make it easier to build complex applications using JavaScript</li>
-                            <li>Automates common JavaScript tasks &amp; workflows</li>
-                            <li>Provides user interface (layout structure, graphs, form items)</li>
-                            <li>Dojo is organized in <em>modules</em> to make it easy to load</li>
+                            <li>Layout: Containers, Tabs, Accordions</li>
+                            <li>App control: Menus, Dialogs</li>
+                            <li>Forms: Validating text box, Dropdowns, Rich Text</li>
+                            <li>Data Display: Charts, Grids, Gauges</li>
                         </ul>
+                    </section>
                 </section>
-                <section>
-                    <h3>Loading modules</h3>
-                    Load modules using the <code><b>require</b></code> method:
-                    <div style="text-align: left; margin:auto; width:50%"><br /><code style="text-align:left;">require(["esri/Map"], <br />&nbsp;&nbsp;function(Map){<br />
-                           &nbsp;&nbsp;&nbsp;&nbsp;var map = new Map();<br />
-                        &nbsp;&nbsp;}<br /> );
-                    </code>
-                        </div><br />
-                    First is the list of modules you're using, <br />then a function that uses the modules as parameters
-                </section>
-                <section>
-                    <h3>Dijits</h3>
-                    User Interface (UI) components
-                    <ul>
-                        <li>Layout: Containers, Tabs, Accordions</li>
-                        <li>App control: Menus, Dialogs</li>
-                        <li>Forms: Validating text box, Dropdowns, Rich Text</li>
-                        <li>Data Display: Charts, Grids, Gauges</li>
-                    </ul>
-                </section>
+
                 <section>
                     <h3>Inside the JS API</h3>
                     <ul>
@@ -153,7 +165,7 @@
                 <section>
                     <h2>Developing Applications</h2>
                 </section>
-                <section>
+                <section class="coding-tools">
                     <h3>Coding Tools</h3>
                     
                 </section>
@@ -162,10 +174,14 @@
                     <p>(it's not just for cleaning)</p>
                 </section>
                 <section>
-                    <h5>Not all browsers are created equal</h5>
-                    <p class="fragment small">(IE 8, I'm looking at you)</p>
-                    <iframe class="fragment fancy" src="http://caniuse.com/geolocation/embed/" width="920" height="386"></iframe>
-                    <p class="fragment">&#9654; <i class="small">Note: U.S. Government has an IE 8 standard</i> &#9664;</p>
+                    <h3>Asynchronous Javascript and XML (AJAX)</h3>
+                    <ul>
+                        <li>Web pages load data from servers on demand <em>without</em> reloading the page</li>
+                        <li>Event driven: your application doesn't wait for the data to load</li>
+                        <li>Callback - a function that runs when the response from the web server is received</li>
+                        <li>Some restrictions...</li>
+                    </ul>
+                    
                 </section>
                 <section>
                     <h3>Proxies &amp; CORS</h3>
@@ -181,10 +197,89 @@
                     </ul>
                 </section>
                 <section>
+                    <h3>Demo: Loading a map from ArcGIS Online</h3>
+                </section>
+                <section>
                     <h3>What's coming?</h3>
                 </section>
                 <section>
+                    <section>
+                        <h5>HTML5: greater functionality</h5>
+                        <img src="//upload.wikimedia.org/wikipedia/commons/f/f7/HTML5-APIs-and-related-technologies-by-Sergey-Mavrody.png"
+                         class="bigImage" />
+                    </section>
+                    <section>
+                        <h2>Key new features</h2>
+                    </section>
+                    <section>
+                    <h3>Application functionality</h3>
+                        <ul>
+                            <li>File API - upload files into the browser</li>        
+                            <li>Cross-Origin Resource Sharing (CORS) - mashups w/o proxies</li>
+                            <li>Web Sockets - live communication to/from server</li>
+                            <li>Web Workers - client-side processing off-page</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>CSS (What you've been seeing)</h3>
+                        <ul>
+                            <li>Animations (slide transitions)</li>
+                            <li>2D/3D Rotation/Transformation (slide transitions)</li>
+                            <li>Gradients (this background)</li>
+                            <li class="fancyfont">Web fonts (the title is Avenir)</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Graphics Capabilities</h3>
+                            <ul>
+                                <li>Canvas - in-page editable images</li>
+                                <li>SVG - standardized vectors</li>
+                                <li>WebGL - 3D display (CityEngine Viewer)</li>
+                            </ul>
+                    </section>
+                    <section>
+                        <h3>Mobile apps</h3>
+                            <ul>
+                                <li>Geolocation - where are you?</li>
+                                <li>Web Storage - offline storage</li>
+                                <li>Touch Events - use your fingers</li>
+                            </ul>
+                    </section>
+                    <section>
+                        <h5>Note: Not all browsers are created equal</h5>
+                        <p class="fragment small">(IE 8, I'm looking at you)</p>
+                        <iframe class="fragment fancy" src="http://caniuse.com/geolocation/embed/" width="920" height="386"></iframe>
+                        <p class="fragment">&#9654; <i class="small">Note: U.S. Government has an IE 8 standard</i> &#9664;</p>
+                    </section>                    
+                </section>
+                <section>
+                    <h3>Web App Builder</h3>
+                    
+            
+                </section>
+                <section>
+                    <h3>JS API updates</h3>
+                </section>
+                <section>
                     <h2>Questions?</h2>
+                </section>
+                <section>
+                    <h3>Resources</h3>
+                    <p><a href="https://developers.arcgis.com/javascript/">ArcGIS JS Documentation</a><br />
+                        GitHub repos:</p>
+                    <ul>
+                        <li><a href="https://github.com/ecaldwell?tab=repositories">Evan Caldwell (ecaldwell)</a>
+                        <!--<ul></ul>-->
+                        </li>
+                        <li><a href="https://github.com/tedrick?tab=repositories">
+                               James Tedrick (tedrick)</a>
+                            <ul>
+                                <li>IntroJSpresentation</li>
+                                <li>JSONLoader (AJAX example)</li>
+                                <li>mapCard (basic application working with ArcGIS Online)</li>
+                            </ul>
+                        </li>
+                    </ul>
                 </section>
 				<section class="lastSlide">
                     <!--<img src="assets/esri-logo.png" />-->
