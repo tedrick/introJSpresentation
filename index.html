@@ -82,8 +82,9 @@
                     <h3>What can you do with the JS API?</h3>
                     <ul>
                         <li>Create Interactive maps</li>
-                        <li>Use ArcGIS Online Basemaps &amp; Services</li>
+                        <li>Use ArcGIS Online Resources (Content, Basemaps, Services)</li>
                         <ul>
+                            <li>Load maps from ArcGIS Online</li>
                             <li>Find Addresses</li>
                             <li>Calculate a route</li>
                         </ul>
@@ -128,7 +129,7 @@
                 <section>
                     <h3>Inside the JS API</h3>
                     <ul>
-                        <li>Map - with contorls, infoWindow (pop-up), graphics layer &amp; map layers</li>
+                        <li>Map - with controls, infoWindow (pop-up), graphics layer &amp; map layers</li>
                         <li>Map Layers
                             <ul>
                                 <li>Map Service Layers - images of maps (entire area or cached tiles)</li>
@@ -138,7 +139,7 @@
                         </li>
                     </ul>
                 </section>
-                <section>
+                <section style="margin-top:80px">
                     <h3>Esri Dijits - Map UI</h3>
                         <ul style="column-count:2; -moz-column-count:2; -webkit-column-count:2; list-style-position: inside; margin-top:30px;">
                             <li>Geolocation</li>
@@ -169,12 +170,20 @@
                     <h3>Coding Tools</h3>
                     
                 </section>
-                <section>
-                    <h3>Ajax</h3>
-                    <p>(it's not just for cleaning)</p>
+                <section style="height:80%">
+                    <h3>Debug environment - Your Browser</h3>
+                    <img src="assets/InspectRecursive.png" width="500" />
+                    <table style="float:left; vertical-align:middle; height:500px;">
+                        <tr><td style="vertical-align:middle"><ul style="vertical-align:middle; hieght:100%">
+                            <li>Javascript console</li>
+                            <li>Network traffic inspector</li>
+                            <li>Live access to the loaded document</li>
+                        </ul>
+                        </td></tr>
+                    </table>
                 </section>
                 <section>
-                    <h3>Asynchronous Javascript and XML (AJAX)</h3>
+                    <h3>How apps work - AJAX</h3>
                     <ul>
                         <li>Web pages load data from servers on demand <em>without</em> reloading the page</li>
                         <li>Event driven: your application doesn't wait for the data to load</li>
@@ -209,9 +218,6 @@
                          class="bigImage" />
                     </section>
                     <section>
-                        <h2>Key new features</h2>
-                    </section>
-                    <section>
                     <h3>Application functionality</h3>
                         <ul>
                             <li>File API - upload files into the browser</li>        
@@ -221,12 +227,12 @@
                         </ul>
                     </section>
                     <section>
-                        <h3>CSS (What you've been seeing)</h3>
+                        <h3>CSS3 (What you've been seeing)</h3>
                         <ul>
                             <li>Animations (slide transitions)</li>
                             <li>2D/3D Rotation/Transformation (slide transitions)</li>
                             <li>Gradients (this background)</li>
-                            <li class="fancyfont">Web fonts (the title is Avenir)</li>
+                            <li><span  class="fancyfont">Web fonts (not installed on viewer's computer)</span></li>
                         </ul>
                     </section>
                     <section>
@@ -247,14 +253,16 @@
                     </section>
                     <section>
                         <h5>Note: Not all browsers are created equal</h5>
-                        <p class="fragment small">(IE 8, I'm looking at you)</p>
-                        <iframe class="fragment fancy" src="http://caniuse.com/geolocation/embed/" width="920" height="386"></iframe>
-                        <p class="fragment">&#9654; <i class="small">Note: U.S. Government has an IE 8 standard</i> &#9664;</p>
+                        <p class="small">(IE 8, I'm looking at you)</p>
+                        <iframe class="fancy" src="http://caniuse.com/geolocation/embed/" width="920" height="386"></iframe>
+                        <p class="fragment">&#9654; <i class="small">IE 8: Standard for most federal agencies, possibly with FF 17/24 ESR alternative</i> &#9664;
+                         
+                        </p>
                     </section>                    
                 </section>
                 <section>
                     <h3>Web App Builder</h3>
-                    
+                    <img src="assets/webappbuilder.png" class="fancy" />
             
                 </section>
                 <section>
@@ -266,7 +274,9 @@
                 <section>
                     <h3>Resources</h3>
                     <p><a href="https://developers.arcgis.com/javascript/">ArcGIS JS Documentation</a><br />
-                        GitHub repos:</p>
+                    <hr />
+                    GitHub repos:</p>
+
                     <ul>
                         <li><a href="https://github.com/ecaldwell?tab=repositories">Evan Caldwell (ecaldwell)</a>
                         <!--<ul></ul>-->
@@ -275,7 +285,6 @@
                                James Tedrick (tedrick)</a>
                             <ul>
                                 <li>IntroJSpresentation</li>
-                                <li>JSONLoader (AJAX example)</li>
                                 <li>mapCard (basic application working with ArcGIS Online)</li>
                             </ul>
                         </li>
