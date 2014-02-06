@@ -1,7 +1,6 @@
 /* Funky Font */
 @import url(http://fonts.googleapis.com/css?family=Rock+Salt);
 
-
 .big {
     font-size: 1.5em !important;
 }
@@ -11,6 +10,8 @@
 }
 
 .bigImage {max-height:500px !important;}
+
+.right {position:absolute; float: right;}
 
 .reveal ul ul {
     list-style-type: circle
