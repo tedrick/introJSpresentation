@@ -27,6 +27,11 @@
     font-family: 'Rock Salt', cursive !important;
 }
 
+.fullsize {
+    height:90%;
+    width:90%;
+}
+
 .coding-tools {
     height: 100%;
     width:100%;
